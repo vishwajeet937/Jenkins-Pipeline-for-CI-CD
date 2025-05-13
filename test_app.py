@@ -5,6 +5,8 @@ from app import app
 def client():
     with app.test_client() as client:
         yield client
+
 def test_hello(client):
     response = client.get('/')
-    assert b"Hello,devOps Internship Task 2!" in response.data       
+    print(response.data)  # Print the actual response for debugging
+    assert b"Hello, DevOps Internship Task 2!" in response.data
