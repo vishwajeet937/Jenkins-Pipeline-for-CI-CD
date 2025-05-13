@@ -1,20 +1,20 @@
-# Base image
+# 1 Base image
 FROM python:3.10-slim
 
-# Set working directory
+# 2 Set working directory
 WORKDIR /app
 
-# Copy dependencies
+# 3 Copy dependencies
 COPY requirements.txt .
 
-# Install dependencies
+# 4 Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy app code
+# 5 Copy app code
 COPY . .
 
-# Expose the port (optional but good for documentation)
+# 6 Expose the port (optional but good for documentation)
 EXPOSE 5000
 
-# Run the app
+# 7 Run the app
 CMD ["python", "app.py"]
