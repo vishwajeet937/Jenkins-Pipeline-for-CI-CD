@@ -8,5 +8,5 @@ def client():
 
 def test_hello(client):
     response = client.get('/')
-    print(response.data)  # Print the actual response for debugging
+    print(response.data)  
     assert b"Hello, DevOps Internship Task 2!" in response.data
