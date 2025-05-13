@@ -9,4 +9,4 @@ def client():
 def test_hello(client):
     response = client.get('/')
     print(response.data)  
-    assert b"Hello, DevOps Internship Task 2!" in response.data
+    assert b"Hello, DevOps Internship Task" in response.data

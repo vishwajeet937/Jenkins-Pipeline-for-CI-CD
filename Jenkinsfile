@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME =  "ajithkumarreddy/my-flask-app"
+        IMAGE_NAME =  "vishwajeetkumar/my-flask-app"
         TAG = "${BUILD_ID}"
     }
 
@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main', 
-                    url: 'https://github.com/AJITH10000/Jenkins-Pipeline-for-CI-CD.git'
+                    url: 'https://github.com/vishwajeet937/Jenkins-Pipeline-for-CI-CD.git'
             }
         }
 
